@@ -1,4 +1,5 @@
-import { ApplicationForm } from "../../workable-application-form-react/output/modern.main";
+//@ts-ignore
+import { ApplicationForm } from "workable-application-form-react/output/main.module";
 
 type WorkableField = {
   id: string;
@@ -64,7 +65,7 @@ export default function Home({ form }: { form: WorkableField[] }) {
   return (
     <>
       <ApplicationForm
-        onSave={onSave as any}
+        onSave={onSave}
         form={form}
         config={{
           telephoneInitialCountry: "IT",
